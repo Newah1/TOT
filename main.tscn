@@ -1,20 +1,50 @@
-[gd_scene load_steps=3 format=3 uid="uid://btwoxbeget7w7"]
+[gd_scene load_steps=6 format=3 uid="uid://btwoxbeget7w7"]
 
 [ext_resource type="FontFile" uid="uid://h2hodqflpd2c" path="res://PixelCowboy-l7we.ttf" id="1_a8fco"]
-[ext_resource type="Script" path="res://Title.cs" id="2_ufi77"]
+[ext_resource type="Script" path="res://Menu.cs" id="1_sf4vq"]
+[ext_resource type="Theme" uid="uid://rfepuf5il1e8" path="res://DefaultButtonTheme.tres" id="3_ldcb2"]
+[ext_resource type="Texture2D" uid="uid://btux6w4mnka5m" path="res://assets/flourish.png" id="4_kcnjc"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_wdtbv"]
+resource_local_to_scene = true
 
 [node name="Node2D" type="Node2D"]
 
-[node name="Title" type="RichTextLabel" parent="."]
+[node name="Menu" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 252.0
+offset_top = 135.0
+offset_right = 928.0
+offset_bottom = 175.0
+script = ExtResource("1_sf4vq")
+
+[node name="Title" type="RichTextLabel" parent="Menu"]
+layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -352.0
-offset_right = 352.0
-offset_bottom = 140.0
+offset_left = -347.0
+offset_top = -41.0
+offset_right = 357.0
+offset_bottom = 99.0
 grow_horizontal = 2
 rotation = -6.28319
 theme_override_fonts/normal_font = ExtResource("1_a8fco")
 theme_override_font_sizes/normal_font_size = 100
 text = "The Oregon Trail"
-script = ExtResource("2_ufi77")
+
+[node name="Button" type="Button" parent="Menu"]
+layout_mode = 0
+offset_left = 215.0
+offset_top = 171.0
+offset_right = 459.0
+offset_bottom = 236.0
+theme = ExtResource("3_ldcb2")
+text = "Start Game"
+
+[node name="Sprite2D" type="Sprite2D" parent="Menu"]
+material = SubResource("CanvasItemMaterial_wdtbv")
+position = Vector2(336, 102)
+scale = Vector2(0.597087, 0.597087)
+texture = ExtResource("4_kcnjc")

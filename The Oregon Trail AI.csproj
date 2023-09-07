@@ -4,4 +4,8 @@
     <EnableDynamicLoading>true</EnableDynamicLoading>
     <RootNamespace>TheOregonTrailAI</RootNamespace>
   </PropertyGroup>
+  <ItemGroup>
+    <Content Include="assets\flourish.png" />
+    <Content Include="assets\flourish.png.import" />
+  </ItemGroup>
 </Project>
