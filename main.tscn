@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://btwoxbeget7w7"]
+
+[ext_resource type="FontFile" uid="uid://h2hodqflpd2c" path="res://PixelCowboy-l7we.ttf" id="1_a8fco"]
+[ext_resource type="Script" path="res://Title.cs" id="2_ufi77"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Title" type="RichTextLabel" parent="."]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -352.0
+offset_right = 352.0
+offset_bottom = 140.0
+grow_horizontal = 2
+rotation = -6.28319
+theme_override_fonts/normal_font = ExtResource("1_a8fco")
+theme_override_font_sizes/normal_font_size = 100
+text = "The Oregon Trail"
+script = ExtResource("2_ufi77")
