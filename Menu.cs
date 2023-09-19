@@ -8,13 +8,12 @@ public partial class Menu : Control
 	public override async void _Ready()
 	{
 		GetViewport().Connect("size_changed", new Callable(this, "_OnWindowResized"));
-
-		var node = GetTree().Root.GetNode("RootMainNode") as Main;
-		/*var response =
-			await node.AiService.GetResponseSimple("Generate a new title for a game based on the Oregon trail that's under 30 characters without quotation marks");
+		
+		var response =
+			await Provider.AiService.GetResponseSimple("Generate a new title for a game based on the Oregon trail that's under 30 characters without quotation marks");
 
 		var title = GetNode<RichTextLabel>("Title");
-		title.Text = response.Response;*/
+		title.Text = response.Response.Replace("\"", "");
 		Center();
 	}
 
